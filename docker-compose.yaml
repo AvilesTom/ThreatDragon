@@ -2,8 +2,20 @@ services:
   threatdragon:
     image: owasp/threat-dragon:v2.5.0
     container_name: threatdragon
-    ports: 
-      - "8080:8080"
+    expose:
+      - "8080"
     volumes:
       - ./config.env:/app/.env
 
+  reverseproxy:
+    image: nginx:latest
+    container_name: reverseproxy
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/SSL/nginx-selfsigned.crt:/etc/nginx/SSL/nginx-selfsigned.crt
+      - ./nginx/SSL/nginx-selfsigned.key:/etc/nginx/SSL/nginx-selfsigned.key
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - threatdragon
