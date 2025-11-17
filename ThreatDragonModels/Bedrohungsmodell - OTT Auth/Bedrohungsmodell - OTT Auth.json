@@ -137,8 +137,8 @@
           },
           {
             "position": {
-              "x": 280,
-              "y": -6.999999999999922
+              "x": 301,
+              "y": 3
             },
             "size": {
               "width": 130,
@@ -149,8 +149,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -260,10 +260,40 @@
                   "new": false,
                   "number": 101,
                   "score": "28"
+                },
+                {
+                  "id": "1315d8f3-4ebd-4bb8-901c-79f607627343",
+                  "title": "#201 Session Spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Nach erfolgreiche Auth.  Session ist für ein Jahr gültig. Attacker stiehlt die authentifizierte Sitzung von User.\n\nCAPEC-60: Reusing Session IDs (aka Seesion replay): This attack targets the reuse of valid session ID to spoof the target system in order to gain privileges. The attacker tries to reuse a stolen session ID used previously during a transaction to perform spoofing and session hijacking. Another name for this type of attack is Session Replay.\n\nTaktik ID:  T1563",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 103,
+                  "score": ""
                 }
               ],
-              "hasOpenThreats": false,
-              "isWebApplication": null
+              "hasOpenThreats": true,
+              "isWebApplication": null,
+              "handlesCardPayment": null,
+              "handlesGoodsOrServices": null,
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -499,13 +529,15 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "threats": [],
-              "hasOpenThreats": false
+              "hasOpenThreats": false,
+              "handlesCardPayment": null,
+              "handlesGoodsOrServices": null
             }
           },
           {
             "position": {
-              "x": 421,
-              "y": 306
+              "x": 410,
+              "y": 310
             },
             "size": {
               "width": 120,
@@ -635,7 +667,8 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "handlesCardPayment": null,
-              "handlesGoodsOrServices": null
+              "handlesGoodsOrServices": null,
+              "isWebApplication": null
             }
           },
           {
@@ -1343,7 +1376,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Telefonnr.\n& OTT",
-              "description": "",
+              "description": "Hryptographie: TLS",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1439,7 +1472,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Monatliche report ",
+              "name": "Wöchentlichen Report ",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1452,7 +1485,7 @@
               "threats": []
             },
             "labels": [
-              "Monatliche report "
+              "Wöchentlichen Report "
             ],
             "id": "762392bf-f46d-4287-8ef6-8caa0896a346",
             "source": {
@@ -1462,7 +1495,13 @@
             "target": {
               "cell": "92b0d03d-b0d8-49c6-90ae-49ac251bf2ec",
               "port": "c1c23263-ccbd-47bc-83d4-bb78d0388eba"
-            }
+            },
+            "vertices": [
+              {
+                "x": 432,
+                "y": -300
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1530,7 +1569,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Ack/Antwort",
-              "description": "",
+              "description": "Hryptographie: TLS",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1555,55 +1594,26 @@
             },
             "vertices": [
               {
+                "x": 1040,
+                "y": 30
+              },
+              {
+                "x": 1020,
+                "y": 28
+              },
+              {
+                "x": 1000,
+                "y": 30
+              },
+              {
                 "x": 980,
+                "y": 28
+              },
+              {
+                "x": 950,
                 "y": 28
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Telefonnr. & OTT",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Telefonnr. & OTT"
-            ],
-            "id": "948f0b5e-d6be-4fdb-a8ea-5a1855254b72",
-            "source": {
-              "x": 1015,
-              "y": 68
-            },
-            "target": {
-              "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69",
-              "port": "0391314e-9584-41cb-b5a3-4b3e747a3ed6"
-            }
           },
           {
             "shape": "flow",
@@ -1823,6 +1833,57 @@
               "cell": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78",
               "port": "07fffa61-d55c-4809-ac1f-cb6ec87bc4ef"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Telefonnr. & OTT",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Telefonnr. & OTT"
+            ],
+            "id": "948f0b5e-d6be-4fdb-a8ea-5a1855254b72",
+            "source": {
+              "cell": "ebc88767-2bed-409f-b854-efadec206ba8",
+              "port": "eda8f116-329d-4e24-9d1c-da705a65d0c7"
+            },
+            "target": {
+              "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69",
+              "port": "0391314e-9584-41cb-b5a3-4b3e747a3ed6"
+            },
+            "vertices": [
+              {
+                "x": 900,
+                "y": 210
+              }
+            ]
           },
           {
             "position": {
@@ -2435,8 +2496,8 @@
           },
           {
             "position": {
-              "x": 376,
-              "y": -390
+              "x": 360,
+              "y": -370
             },
             "size": {
               "width": 112.5,
@@ -2680,7 +2741,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 102
+    "threatTop": 103
   },
   "version": "2.5.0"
 }
