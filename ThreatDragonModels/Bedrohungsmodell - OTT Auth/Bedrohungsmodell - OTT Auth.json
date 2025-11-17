@@ -263,7 +263,7 @@
                 },
                 {
                   "id": "1315d8f3-4ebd-4bb8-901c-79f607627343",
-                  "title": "#201 Session Spoofing",
+                  "title": "Session Spoofing",
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Spoofing",
@@ -280,7 +280,7 @@
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
