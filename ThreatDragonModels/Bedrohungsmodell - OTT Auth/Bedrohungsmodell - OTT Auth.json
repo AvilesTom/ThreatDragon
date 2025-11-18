@@ -447,8 +447,8 @@
                 "text": "Telefonnummer-\nAPI-Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -545,11 +545,33 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "9200b86c-867f-43a3-bd09-a50dd0b2b882",
+                  "title": "Ressource exhaustion",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Durch MITM Angriff, werden die Anfragen geändert mit versteckte Code für hohe Ressource Auslastung .\n\nCAPEC-230: Serialized Data with Nested Payloads - Applications often need to transform data in and out of a data format (e.g., XML and YAML) by using a parser. By nesting these structures, causing the data to be repeatedly substituted, an adversary can cause the parser to consume more resources while processing, causing excessive memory consumption and CPU utilization.\n\nATT&CK:  T1565.002 Transmited Data Manipulation - By manipulating transmitted data, adversaries may attempt to affect a business process, organizational understanding, and decision making.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 109,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
-              "isWebApplication": null
+              "isWebApplication": null,
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2827,7 +2849,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 108
+    "threatTop": 109
   },
   "version": "2.5.0"
 }
