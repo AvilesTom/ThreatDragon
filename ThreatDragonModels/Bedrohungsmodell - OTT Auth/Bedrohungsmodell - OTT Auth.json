@@ -291,8 +291,8 @@
           },
           {
             "position": {
-              "x": 530,
-              "y": -17
+              "x": 520,
+              "y": -20
             },
             "size": {
               "width": 130,
@@ -564,14 +564,14 @@
                   "id": "9200b86c-867f-43a3-bd09-a50dd0b2b882",
                   "title": "Ressource exhaustion",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Denial of service",
-                  "description": "Durch MITM Angriff, werden die Anfragen geändert mit versteckte Code für hohe Ressource Auslastung .\n\nCAPEC-230: Serialized Data with Nested Payloads - Applications often need to transform data in and out of a data format (e.g., XML and YAML) by using a parser. By nesting these structures, causing the data to be repeatedly substituted, an adversary can cause the parser to consume more resources while processing, causing excessive memory consumption and CPU utilization.\n\nATT&CK:  T1565.002 Transmited Data Manipulation - By manipulating transmitted data, adversaries may attempt to affect a business process, organizational understanding, and decision making.",
+                  "description": "Durch MITM Angriff, werden die Anfragen geändert mit versteckte Code für hohe Ressource Auslastung .\n\nCAPEC-230: Serialized Data with Nested Payloads - Applications often need to transform data in and out of a data format (e.g., XML and YAML) by using a parser. By nesting these structures, causing the data to be repeatedly substituted, an adversary can cause the parser to consume more resources while processing, causing excessive memory consumption and CPU utilization.\n\nATT&CK:  T1565.002 Transmited Data Manipulation - By manipulating transmitted data, adversaries may attempt to affect a business process, organizational understanding, and decision making.\n\nD:8 R:7 E:5 A:8",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 109,
-                  "score": ""
+                  "score": "28"
                 }
               ],
               "hasOpenThreats": true,
@@ -583,9 +583,16 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 3,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2067,18 +2074,18 @@
                   "id": "5069dfc5-01bf-4a30-b6d5-16f4a6eb08f8",
                   "title": "SQL Injection in Database ",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": "Angreifer versuch bösartige Code in der DB hinzufügen. \n\nCAPEC-66: SQL Injection - An attacker crafts input strings so that when the target software constructs SQL statements based on the input, the resulting SQL statement performs actions other than those the application intended.\n\nATT&CK: T105 Process Injection - Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges.",
+                  "description": "Angreifer versuch bösartige Code in der DB hinzufügen. \n\nCAPEC-66: SQL Injection - An attacker crafts input strings so that when the target software constructs SQL statements based on the input, the resulting SQL statement performs actions other than those the application intended.\n\nATT&CK: T105 Process Injection - Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges.\n\nD: 9 R: 10 E: 8 A: 10",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
-                  "score": ""
+                  "score": "37"
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 6,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
@@ -2454,20 +2461,20 @@
                   "id": "629a6b55-e4ff-4c82-af53-d1e31adf0f1c",
                   "title": "Manipulation von API Message/Request",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Repudiation",
-                  "description": "Angreifer versuch durch Man in the Middle Attack das Inhalt von API Schnittstelle zu ändern (Telefonnummer oder Nachricht an der Kunde).  Kunde bekommt eine gefälschte Nachricht oder gar keine.\n\nCAPEC-384: Application API Message Manipulation via Man-in-the-Middle - An attacker manipulates either egress or ingress data from a client within an application framework in order to change the content of messages. \n\nATT&CK: T1557 Adversary in the Middle - Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as Network Sniffing, Transmitted Data Manipulation, or replay attacks",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Angreifer versuch durch Man in the Middle Attack das Inhalt von API Schnittstelle zu ändern (Telefonnummer oder Nachricht an der Kunde).  Kunde bekommt eine gefälschte Nachricht oder gar keine.\n\nCAPEC-384: Application API Message Manipulation via Man-in-the-Middle - An attacker manipulates either egress or ingress data from a client within an application framework in order to change the content of messages. \n\nATT&CK: T1557 Adversary in the Middle - Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as Network Sniffing, Transmitted Data Manipulation, or replay attacks\n\nD: 10 R:8 E:5 (Angefordert sind Angriffsmechanismen ) A:5",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
-                  "score": ""
+                  "score": "28"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 0,
-                "repudiation": 1,
+                "tampering": 1,
+                "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
@@ -2596,20 +2603,20 @@
                   "id": "8651abbf-c30a-401d-915e-528983876c33",
                   "title": "Log-Dateien ",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Repudiation",
-                  "description": "Angreifer löscht, einfügt oder ändern die Information in den Log-Datei, bevor das Wöchentliche Report.\n\nCAPEC-268: Audit Log Manipulation - The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. \n\nATT&CK : T154 - Adversaries may also target centralized logging infrastructure such as SIEMs. Logs may also be bulk exported and sent to adversary-controlled infrastructure for offline analysis.\n",
+                  "description": "Angreifer löscht, einfügt oder ändern die Information in den Log-Datei, bevor das Wöchentliche Report.\n\nCAPEC-268: Audit Log Manipulation - The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. \n\nATT&CK : T154 - Adversaries may also target centralized logging infrastructure such as SIEMs. Logs may also be bulk exported and sent to adversary-controlled infrastructure for offline analysis.\n \nD: 8 R:8 E:5 A:6 (Monitoring auf 2 Funktionen) ",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
-                  "score": ""
+                  "score": "27"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
-                "repudiation": 3,
+                "repudiation": 5,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
