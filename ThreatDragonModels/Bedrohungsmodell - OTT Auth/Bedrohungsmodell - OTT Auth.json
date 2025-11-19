@@ -566,7 +566,7 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Denial of service",
-                  "description": "Durch MITM Angriff, werden die Anfragen geändert mit versteckte Code für hohe Ressource Auslastung .\n\nCAPEC-230: Serialized Data with Nested Payloads - Applications often need to transform data in and out of a data format (e.g., XML and YAML) by using a parser. By nesting these structures, causing the data to be repeatedly substituted, an adversary can cause the parser to consume more resources while processing, causing excessive memory consumption and CPU utilization.\n\nATT&CK:  T1565.002 Transmited Data Manipulation - By manipulating transmitted data, adversaries may attempt to affect a business process, organizational understanding, and decision making.\n\nD:8 R:7 E:5 A:8",
+                  "description": "Durch MITM Angriff, werden die Anfragen geändert mit versteckte Code für hohe Ressource Auslastung .\n\nCAPEC-230: Serialized Data with Nested Payloads - Applications often need to transform data in and out of a data format (e.g., XML and YAML) by using a parser. By nesting these structures, causing the data to be repeatedly substituted, an adversary can cause the parser to consume more resources while processing, causing excessive memory consumption and CPU utilization.\n\nATT&CK:  T1565.002 Transmited Data Manipulation - By manipulating transmitted data, adversaries may attempt to affect a business process, organizational understanding, and decision making.\n\nD:8/R:7/E:5/A:8/DREA: 28",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -583,12 +583,14 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
+                "denialOfService": 4,
                 "elevationOfPrivilege": 0
               }
             },
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
                 "boundary",
                 "button-remove"
               ],
@@ -1984,6 +1986,7 @@
               "Data Flow"
             ],
             "id": "bfcf117b-b7f0-4bdc-a1f1-d722d7551907",
+            "parent": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78",
             "source": {
               "cell": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78",
               "port": "07fffa61-d55c-4809-ac1f-cb6ec87bc4ef"
@@ -1992,8 +1995,7 @@
               "cell": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78",
               "port": "07fffa61-d55c-4809-ac1f-cb6ec87bc4ef"
             },
-            "vertices": [],
-            "parent": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78"
+            "vertices": []
           },
           {
             "position": {
@@ -2134,7 +2136,8 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
-              }
+              },
+              "storesInventory": null
             }
           },
           {
@@ -2508,7 +2511,7 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Tampering",
-                  "description": "Angreifer versuch durch Man in the Middle Attack das Inhalt von API Schnittstelle zu ändern (Telefonnummer oder Nachricht an der Kunde).  Kunde bekommt eine gefälschte Nachricht oder gar keine.\n\nCAPEC-384: Application API Message Manipulation via Man-in-the-Middle - An attacker manipulates either egress or ingress data from a client within an application framework in order to change the content of messages. \n\nATT&CK: T1557 Adversary in the Middle - Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as Network Sniffing, Transmitted Data Manipulation, or replay attacks\n\nD: 10 R:8 E:5 (Angefordert sind Angriffsmechanismen ) A:5",
+                  "description": "Angreifer versuch durch Man in the Middle Attack das Inhalt von API Schnittstelle zu ändern (Telefonnummer oder Nachricht an der Kunde).  Kunde bekommt eine gefälschte Nachricht oder gar keine.\n\nCAPEC-384: Application API Message Manipulation via Man-in-the-Middle - An attacker manipulates either egress or ingress data from a client within an application framework in order to change the content of messages. \n\nATT&CK: T1557 Adversary in the Middle - Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as Network Sniffing, Transmitted Data Manipulation, or replay attacks\n\nD:10/R:8/E:5 (Angefordert sind Angriffsmechanismen )/A:5/ DREA: 28",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2518,7 +2521,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
