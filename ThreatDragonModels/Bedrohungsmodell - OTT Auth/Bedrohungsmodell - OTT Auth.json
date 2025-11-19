@@ -450,7 +450,7 @@
           {
             "position": {
               "x": 1120,
-              "y": -90
+              "y": -95
             },
             "size": {
               "width": 120,
@@ -461,8 +461,8 @@
                 "text": "Telefonnummer-\nAPI-Gateway"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -563,18 +563,18 @@
                 {
                   "id": "9200b86c-867f-43a3-bd09-a50dd0b2b882",
                   "title": "Ressource exhaustion",
-                  "status": "Open",
-                  "severity": "High",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Denial of service",
                   "description": "Durch MITM Angriff, werden die Anfragen geändert mit versteckte Code für hohe Ressource Auslastung .\n\nCAPEC-230: Serialized Data with Nested Payloads - Applications often need to transform data in and out of a data format (e.g., XML and YAML) by using a parser. By nesting these structures, causing the data to be repeatedly substituted, an adversary can cause the parser to consume more resources while processing, causing excessive memory consumption and CPU utilization.\n\nATT&CK:  T1565.002 Transmited Data Manipulation - By manipulating transmitted data, adversaries may attempt to affect a business process, organizational understanding, and decision making.\n\nD:8/R:7/E:5/A:8/DREA: 28",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "TLS 1.3 und sichere Cipher Suites sind Pflicht. Payload Validation: Größe der Anfrage beschränken und während Deserializierung, Schemas die hoch wahrscheinlich zu Scripts gehören, nicht erlauben \n\nASVS 1.5.2 Safe Deserialization:  Verify that deserialization of untrusted data enforces safe input handling, such as using an allowlist of object types or restricting client‑defined object types, to prevent deserialization attacks.\n\nD:8/R:3/E:2/A8/DREA: 21\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 109,
-                  "score": "28"
+                  "score": "21"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "isWebApplication": null,
@@ -583,9 +583,16 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 4,
+                "denialOfService": 6,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2518,13 +2525,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
