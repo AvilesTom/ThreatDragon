@@ -1962,13 +1962,11 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2068,28 +2066,35 @@
               "storesCredentials": false,
               "isEncrypted": true,
               "isSigned": true,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "5069dfc5-01bf-4a30-b6d5-16f4a6eb08f8",
                   "title": "SQL Injection in Database ",
-                  "status": "Open",
-                  "severity": "Critical",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Tampering",
                   "description": "Angreifer versuch bösartige Code in der DB hinzufügen. \n\nCAPEC-66: SQL Injection - An attacker crafts input strings so that when the target software constructs SQL statements based on the input, the resulting SQL statement performs actions other than those the application intended.\n\nATT&CK: T105 Process Injection - Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges.\n\nD: 9 R: 10 E: 8 A: 10",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Eingaben immer als unsicher behandeln. Vor der Nutzung, User-Input validieren und bereinigen (scaping, prepared statements, white lists).\n\nMASVS-CODE: Code Quality: By treating this data as untrusted, developers can prevent classical injection attacks, such as SQL injection, XSS, or insecure deserialization\n\nD:9/R:3/E:2/A:10/DREA: 24",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
-                  "score": "37"
+                  "score": "24"
                 }
               ],
               "threatFrequency": {
-                "tampering": 6,
+                "tampering": 8,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2870,7 +2875,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 113
+    "threatTop": 114
   },
   "version": "2.5.0"
 }
