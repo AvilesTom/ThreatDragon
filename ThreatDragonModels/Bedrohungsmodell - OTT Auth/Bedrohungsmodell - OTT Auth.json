@@ -267,7 +267,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Spoofing",
-                  "description": "Nach erfolgreiche Auth.  Session ist für ein Jahr gültig. Attacker stiehlt die authentifizierte Sitzung von User.\n\nCAPEC-60: Reusing Session IDs (aka Seesion replay): This attack targets the reuse of valid session ID to spoof the target system in order to gain privileges. The attacker tries to reuse a stolen session ID used previously during a transaction to perform spoofing and session hijacking. Another name for this type of attack is Session Replay.\n\nTaktik ID:  T1563",
+                  "description": "Nach erfolgreiche Auth.  Session ist für ein Jahr gültig. Attacker stiehlt die authentifizierte Sitzung von User.\n\nCAPEC-60: Reusing Session IDs (aka Seesion replay): This attack targets the reuse of valid session ID to spoof the target system in order to gain privileges. The attacker tries to reuse a stolen session ID used previously during a transaction to perform spoofing and session hijacking. Another name for this type of attack is Session Replay.\n\nATT&CK: T1563 Remote Service Session Hijacking - Adversaries may take control of preexisting sessions with remote services to move laterally in an environment. When a user logs into a service, a session will be established that will allow them to maintain a continuous interaction with that service. \n\nD:7/R:7/E:5/A:3/DREA:22",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -280,19 +280,26 @@
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 3,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
             "position": {
               "x": 520,
-              "y": -20
+              "y": -30
             },
             "size": {
               "width": 130,
@@ -421,7 +428,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Elevation of privilege",
-                  "description": "Durch Injektion und wegen fehlender Eingabe-Bestätigung in der Login Funktion, Angreifer versucht bösartige Code auszuführen um seine Berechtigungen zu steigern. \n\nCAPEC-234: Hijacking a privileged process - An adversary gains control of a process that is assigned elevated privileges in order to execute arbitrary code with those privileges.\n\nATT&CK: T1548 Abuse Elevation Control Mechanism - Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system",
+                  "description": "Durch Injektion und wegen fehlender Eingabe-Bestätigung in der Login Funktion, Angreifer versucht bösartige Code auszuführen um seine Berechtigungen zu steigern. \n\nCAPEC-234: Hijacking a privileged process - An adversary gains control of a process that is assigned elevated privileges in order to execute arbitrary code with those privileges.\n\nATT&CK: T1548 Abuse Elevation Control Mechanism - Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system\n\nD:9/R:10/E:8/A:10/DREA:37",
                   "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
                   "modelType": "STRIDE",
                   "new": false,
@@ -440,9 +447,9 @@
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 3,
+                "informationDisclosure": 4,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 2
+                "elevationOfPrivilege": 3
               },
               "isWebApplication": null
             }
