@@ -1949,6 +1949,53 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "bfcf117b-b7f0-4bdc-a1f1-d722d7551907",
+            "source": {
+              "cell": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78",
+              "port": "07fffa61-d55c-4809-ac1f-cb6ec87bc4ef"
+            },
+            "target": {
+              "cell": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78",
+              "port": "07fffa61-d55c-4809-ac1f-cb6ec87bc4ef"
+            },
+            "vertices": [],
+            "parent": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78"
+          },
+          {
             "position": {
               "x": 260,
               "y": -250
@@ -2088,13 +2135,6 @@
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -2500,8 +2540,8 @@
                 "text": "SIEM \nSystem"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2598,7 +2638,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -2607,26 +2647,29 @@
                 {
                   "id": "8651abbf-c30a-401d-915e-528983876c33",
                   "title": "Log-Dateien ",
-                  "status": "Open",
-                  "severity": "High",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Angreifer löscht, einfügt oder ändern die Information in den Log-Datei, bevor das Wöchentliche Report.\n\nCAPEC-268: Audit Log Manipulation - The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. \n\nATT&CK : T154 - Adversaries may also target centralized logging infrastructure such as SIEMs. Logs may also be bulk exported and sent to adversary-controlled infrastructure for offline analysis.\n \nD: 8 R:8 E:5 A:6 (Monitoring auf 2 Funktionen) ",
-                  "mitigation": "Sicherstellen, dass Eingaben angepasst wurden, unbefugte Zugriff an der Log-Datei ist verboten (nur berechtige Users) und direkte Pipelines mit verschlüsselte Kommunikationskanäle an andere Speicherort (Backup).\n\nASVS 16.4.1  Verify that all logging components appropriately encode data to prevent log injection.\n\nASVS 16.4.1 Verify that logs are protected from unauthorized access and cannot be modified.\n\nD:8/R:3/E:3/A:6/DREA:18",
+                  "description": "Angreifer löscht, einfügt oder ändern die Information in den Log-Datei, bevor das Wöchentliche Report.\n\nCAPEC-268: Audit Log Manipulation - The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. \n\nATT&CK : T154 - Adversaries may also target centralized logging infrastructure such as SIEMs. Logs may also be bulk exported and sent to adversary-controlled infrastructure for offline analysis.\n \nD:8/R:8/E:5/A:6(Monitoring auf 2 Funktionen)/DREA: 27 ",
+                  "mitigation": "Sicherstellen, dass Eingaben angepasst wurden, unbefugte Zugriff an der Log-Datei ist verboten (nur berechtige Users) und direkte Pipelines mit verschlüsselte Kommunikationskanäle an andere Speicherort (Backup).\n\nASVS 16.4.1  Verify that all logging components appropriately encode data to prevent log injection.\n\nASVS 16.4.1 Verify that logs are protected from unauthorized access and cannot be modified.\n\nD:8/R:3/E:3/A:6/DREA:20",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
-                  "score": "27"
+                  "score": "20"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
-                "repudiation": 6,
+                "repudiation": 8,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            }
+            },
+            "children": [
+              "bfcf117b-b7f0-4bdc-a1f1-d722d7551907"
+            ]
           },
           {
             "position": {
