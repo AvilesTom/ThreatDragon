@@ -408,7 +408,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Information disclosure",
-                  "description": "Angreifer kann wichtige Information aus der Konfigurationsdatei, die nicht unverschlüsselt ist, auslesen.\n\nCAPEC-37: Retrieve Embedded Sensitive Data - An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack.\n\nATT&CK:  T1005 Data from Local System - Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.",
+                  "description": "Angreifer kann wichtige Information aus der Konfigurationsdatei, die nicht unverschlüsselt ist, auslesen.\n\nCAPEC-37: Retrieve Embedded Sensitive Data - An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack.\n\nATT&CK:  T1005 Data from Local System - Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.\n\nD:7/R:8/E:8/A:5/DREA: 28",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -440,7 +440,7 @@
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 3,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 2
               },
@@ -586,15 +586,6 @@
                 "denialOfService": 4,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -2531,7 +2522,7 @@
           },
           {
             "position": {
-              "x": 610,
+              "x": 600,
               "y": -260
             },
             "size": {
