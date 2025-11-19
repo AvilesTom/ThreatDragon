@@ -287,13 +287,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -2399,8 +2392,8 @@
                 "text": "Allsecure Mobile\nPhone OTT\nService"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2497,7 +2490,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -2506,25 +2499,32 @@
                 {
                   "id": "629a6b55-e4ff-4c82-af53-d1e31adf0f1c",
                   "title": "Manipulation von API Message/Request",
-                  "status": "Open",
-                  "severity": "High",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Tampering",
                   "description": "Angreifer versuch durch Man in the Middle Attack das Inhalt von API Schnittstelle zu ändern (Telefonnummer oder Nachricht an der Kunde).  Kunde bekommt eine gefälschte Nachricht oder gar keine.\n\nCAPEC-384: Application API Message Manipulation via Man-in-the-Middle - An attacker manipulates either egress or ingress data from a client within an application framework in order to change the content of messages. \n\nATT&CK: T1557 Adversary in the Middle - Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as Network Sniffing, Transmitted Data Manipulation, or replay attacks\n\nD:10/R:8/E:5 (Angefordert sind Angriffsmechanismen )/A:5/ DREA: 28",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Reverse Proxy um die Ausgang und Eingang von Anfragen zu steuern und analysieren. Sichere verschlüsselte Kommunikationskanäle wie TLS 1.3 und HTTPS benutzen \n\nMitre D3FEND Matrix D3-NTSA: Network Traffic Signature Analysis - Network signature analysis relies on predefined patterns, or signatures, to identify malicious network activity. These signatures typically match against specific byte sequences, packet header information, or protocol anomalies indicative of known threats.\n\nD:10/R:4/E:2/A:5/DREA: 21\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
-                  "score": "28"
+                  "score": "21"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 2,
+                "tampering": 3,
                 "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
