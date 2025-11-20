@@ -405,15 +405,15 @@
                 {
                   "id": "865d7d0f-0023-4e08-91d0-83d701b64309",
                   "title": "Unverslüsselte Kofigurations Datei auslesen ",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Low",
                   "type": "Information disclosure",
-                  "description": "Angreifer kann wichtige Information aus der Konfigurationsdatei, die nicht unverschlüsselt ist, auslesen.\n\nCAPEC-37: Retrieve Embedded Sensitive Data - An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack.\n\nATT&CK:  T1005 Data from Local System - Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.\n\nD:7/R:8/E:8/A:5/DREA: 28",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Angreifer kann wichtige Information aus der Konfigurationsdatei, die nicht unverschlüsselt ist, auslesen.\n\nCAPEC-37: Retrieve Embedded Sensitive Data - An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack.\n\nATT&CK:  T1005 Data from Local System - Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.\n  \nD:7/R:8/E:8/A:5/DREA: 28",
+                  "mitigation": "Sichere Speicherung von Sensible Information (Konfigurationsdatei), Zugriff nur für bestimmte Accounts (Admin). Konfigurationsdatei verschlüsseln und  Backup in anderer Speicherort auch sicher speichern, das ermöglicht Hash von beiden Dateien vergleichen und schauen, ob eine unbefugte Modifikation geführt wurde. \n\nMitre D3FEND Matrix D3-FE: File Encryption - Encrypting a file using a cryptographic key.\nMitre D3FEND Matrix D3-FIM File Integrity Monitoring - Detecting any suspicious changes to files in a computer system.\n\nD:5/R:2/E:2/A:3 (Backup wurde nicht gelesen, geändert)/DREA:12\n\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 108,
-                  "score": ""
+                  "score": "12"
                 },
                 {
                   "id": "c7d5a197-f1e7-46f4-8158-9469528f4d64",
@@ -440,7 +440,7 @@
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 4,
+                "informationDisclosure": 5,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 3
               },
@@ -1806,72 +1806,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Log(Login, OTT, Phone Number)",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Log(Login, OTT, Phone Number)"
-            ],
-            "id": "81c8482c-19ed-41ab-bae2-a5561223b4b5",
-            "source": {
-              "x": 570,
-              "y": 10
-            },
-            "target": {
-              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
-            },
-            "vertices": [
-              {
-                "x": 530,
-                "y": -40
-              },
-              {
-                "x": 480,
-                "y": -90
-              },
-              {
-                "x": 430,
-                "y": -120
-              },
-              {
-                "x": 410,
-                "y": -120
-              },
-              {
-                "x": 350,
-                "y": -160
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Überwachung\nData",
               "description": "",
               "outOfScope": false,
@@ -1994,6 +1928,72 @@
               "port": "07fffa61-d55c-4809-ac1f-cb6ec87bc4ef"
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Log(Login, OTT, Phone Number)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Log(Login, OTT, Phone Number)"
+            ],
+            "id": "81c8482c-19ed-41ab-bae2-a5561223b4b5",
+            "source": {
+              "x": 550,
+              "y": -20
+            },
+            "target": {
+              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
+            },
+            "vertices": [
+              {
+                "x": 530,
+                "y": -40
+              },
+              {
+                "x": 480,
+                "y": -90
+              },
+              {
+                "x": 430,
+                "y": -120
+              },
+              {
+                "x": 410,
+                "y": -120
+              },
+              {
+                "x": 350,
+                "y": -160
+              }
+            ]
           },
           {
             "position": {
