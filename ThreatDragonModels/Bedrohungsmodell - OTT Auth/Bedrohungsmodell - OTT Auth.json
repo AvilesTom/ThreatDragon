@@ -149,8 +149,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -264,23 +264,23 @@
                 {
                   "id": "1315d8f3-4ebd-4bb8-901c-79f607627343",
                   "title": "Session Spoofing",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Nach erfolgreiche Auth.  Session ist für ein Jahr gültig. Attacker stiehlt die authentifizierte Sitzung von User.\n\nCAPEC-60: Reusing Session IDs (aka Seesion replay): This attack targets the reuse of valid session ID to spoof the target system in order to gain privileges. The attacker tries to reuse a stolen session ID used previously during a transaction to perform spoofing and session hijacking. Another name for this type of attack is Session Replay.\n\nATT&CK: T1563 Remote Service Session Hijacking - Adversaries may take control of preexisting sessions with remote services to move laterally in an environment. When a user logs into a service, a session will be established that will allow them to maintain a continuous interaction with that service. \n\nD:7/R:7/E:5/A:3/DREA:22",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Gültige Session Zeit beschränken vllt. um 1 Tag aber der Kunde muss immer sich Authentifizieren. Weitere Auth. Mechanismen verwenden wie OAUTH, Biometrische, Geolocalization. Verwendung von VPN \n\nASVS V7.4  Session termination should result in requiring re‑authentication and be effective across the application, federated login (if present), and any relying parties.\nASVS 7.4.1  Verify that when session termination is triggered (such as logout or expiration),the application disallows any further use of the session.\n\nMASVS-AUTH: Authentication and Authorization: Mobile apps often use different forms of authentication, such as biometrics, PIN, or multi-factor authentication code generators, to validate user identity. These mechanisms must be implemented correctly to ensure their effectiveness in preventing unauthorized access.\n\nD:8/R:2/E:2/A:5/DREA:17\n\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 103,
-                  "score": ""
+                  "score": "17"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isWebApplication": null,
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "threatFrequency": {
-                "spoofing": 3,
+                "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
