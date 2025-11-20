@@ -303,8 +303,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -418,18 +418,18 @@
                 {
                   "id": "c7d5a197-f1e7-46f4-8158-9469528f4d64",
                   "title": "Login Funktion Injektion",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Durch Injektion und wegen fehlender Eingabe-Bestätigung in der Login Funktion, Angreifer versucht bösartige Code auszuführen um seine Berechtigungen zu steigern. \n\nCAPEC-234: Hijacking a privileged process - An adversary gains control of a process that is assigned elevated privileges in order to execute arbitrary code with those privileges.\n\nATT&CK: T1548 Abuse Elevation Control Mechanism - Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system\n\nD:9/R:10/E:8/A:10/DREA:37",
-                  "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
+                  "mitigation": "Alle User-Eingaben vor sanieren und bestätigen vor Nutzung in der Code. Least Privilege Prinzip verwenden und nur notwendige Rechte an Users vergeben.\n\nMitre D3FEND-Matrix D3-UAP User Account Permissions: Restricting a user account's access to resources.\n\nASVS V1.2 Injection prevention:  Output encoding or escaping, performed close to or adjacent to a potentially dangerous context, is critical to the security of any application. \n\nD:10/R:3/E:2/A:8/DREA:",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 113,
-                  "score": ""
+                  "score": "23"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -442,15 +442,15 @@
                 "repudiation": 0,
                 "informationDisclosure": 5,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 3
+                "elevationOfPrivilege": 4
               },
               "isWebApplication": null
             }
           },
           {
             "position": {
-              "x": 1120,
-              "y": -95
+              "x": 1110,
+              "y": -90
             },
             "size": {
               "width": 120,
@@ -586,13 +586,6 @@
                 "denialOfService": 6,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
