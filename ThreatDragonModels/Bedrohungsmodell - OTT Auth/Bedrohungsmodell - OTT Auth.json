@@ -2638,11 +2638,11 @@
               "threats": [
                 {
                   "id": "8651abbf-c30a-401d-915e-528983876c33",
-                  "title": "Log-Dateien ",
+                  "title": "Reports repudiation ",
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Angreifer löscht, einfügt oder ändern die Information in den Log-Datei, bevor das Wöchentliche Report.\n\nCAPEC-268: Audit Log Manipulation - The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. \n\nATT&CK : T154 - Adversaries may also target centralized logging infrastructure such as SIEMs. Logs may also be bulk exported and sent to adversary-controlled infrastructure for offline analysis.\n \nD:8/R:8/E:5/A:6(Monitoring auf 2 Funktionen)/DREA: 27 ",
+                  "description": "Angreifer löscht, einfügt oder ändern die Information in den Reports, bevor das Wöchentliche Report.\n\nCAPEC-268: Audit Log Manipulation - The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. \n\nATT&CK : T154 - Adversaries may also target centralized logging infrastructure such as SIEMs. Logs may also be bulk exported and sent to adversary-controlled infrastructure for offline analysis.\n \nD:8/R:8/E:5/A:6(Monitoring auf 2 Funktionen)/DREA: 27 ",
                   "mitigation": "Sicherstellen, dass Eingaben angepasst wurden, unbefugte Zugriff an der Log-Datei ist verboten (nur berechtige Users) und direkte Pipelines mit verschlüsselte Kommunikationskanäle an andere Speicherort (Backup).\n\nASVS 16.4.1  Verify that all logging components appropriately encode data to prevent log injection.\n\nASVS 16.4.1 Verify that logs are protected from unauthorized access and cannot be modified.\n\nD:8/R:3/E:3/A:6/DREA:20",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2653,7 +2653,7 @@
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
-                "repudiation": 8,
+                "repudiation": 9,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
@@ -2661,7 +2661,14 @@
             },
             "children": [
               "bfcf117b-b7f0-4bdc-a1f1-d722d7551907"
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
