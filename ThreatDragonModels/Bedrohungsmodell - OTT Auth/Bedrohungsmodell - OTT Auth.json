@@ -1938,16 +1938,6 @@
             "target": {
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
-            "vertices": [
-              {
-                "x": 200,
-                "y": 39
-              },
-              {
-                "x": 280,
-                "y": 39
-              }
-            ],
             "tools": {
               "items": [
                 "boundary",
@@ -1957,7 +1947,17 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 200,
+                "y": 39
+              },
+              {
+                "x": 280,
+                "y": 39
+              }
+            ]
           },
           {
             "position": {
