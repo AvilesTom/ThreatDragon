@@ -1526,7 +1526,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Wöchentlichen Report ",
+              "name": "Report  signiert",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1539,7 +1539,7 @@
               "threats": []
             },
             "labels": [
-              "Wöchentlichen Report "
+              "Report  signiert"
             ],
             "id": "762392bf-f46d-4287-8ef6-8caa0896a346",
             "source": {
@@ -1555,51 +1555,16 @@
                 "x": 432,
                 "y": -300
               }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
             ],
-            "id": "70add46c-8a07-4105-b85c-69b3c6f292e1",
-            "source": {
-              "x": 666,
-              "y": -260
-            },
-            "target": {
-              "cell": "ce91862b-3894-43a9-a83e-890138a65b3f",
-              "port": "294741b7-3fe6-4ff0-9b91-8fc2b939481c"
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           },
           {
@@ -2661,18 +2626,11 @@
             },
             "children": [
               "bfcf117b-b7f0-4bdc-a1f1-d722d7551907"
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "position": {
-              "x": 360,
+              "x": 413.75,
               "y": -370
             },
             "size": {
@@ -2789,8 +2747,8 @@
           },
           {
             "position": {
-              "x": 488.5,
-              "y": -250
+              "x": 460,
+              "y": -240
             },
             "size": {
               "width": 60,
@@ -2895,7 +2853,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Email\nDienst",
-              "description": "",
+              "description": "Dienst Signiert und Verschlüsselt die Nachrichten ",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -2905,6 +2863,51 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 18,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Report",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Report"
+            ],
+            "id": "74eb5308-e8c4-4001-9d25-1f4c087a53ce",
+            "source": {
+              "x": 660,
+              "y": -260
+            },
+            "target": {
+              "cell": "ce91862b-3894-43a9-a83e-890138a65b3f",
+              "port": "e05a233a-0986-4c00-8a8e-37f17ffb96e3"
             }
           }
         ],
