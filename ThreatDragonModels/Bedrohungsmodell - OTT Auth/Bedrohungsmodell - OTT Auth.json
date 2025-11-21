@@ -289,8 +289,8 @@
           },
           {
             "position": {
-              "x": 520,
-              "y": -30
+              "x": 526.25,
+              "y": -40
             },
             "size": {
               "width": 130,
@@ -1916,7 +1916,7 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": []
@@ -1947,12 +1947,22 @@
                 "x": 280,
                 "y": 39
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
-              "x": 260,
-              "y": -250
+              "x": 271,
+              "y": -270
             },
             "size": {
               "width": 120,
@@ -2483,8 +2493,8 @@
           },
           {
             "position": {
-              "x": 600,
-              "y": -260
+              "x": 610,
+              "y": -280
             },
             "size": {
               "width": 110,
@@ -2900,8 +2910,8 @@
             ],
             "id": "74eb5308-e8c4-4001-9d25-1f4c087a53ce",
             "source": {
-              "x": 660,
-              "y": -260
+              "cell": "d7bd60b4-ce85-4c2d-a2dd-34e134246a78",
+              "port": "e05a233a-0986-4c00-8a8e-37f17ffb96e3"
             },
             "target": {
               "cell": "ce91862b-3894-43a9-a83e-890138a65b3f",
